@@ -166,14 +166,14 @@ mkdir -p ~/hadoop/hdfs/namenode
 mkdir -p ~/hadoop/hdfs/datanode
 ```
 ### Di Slave:
-***
+```bash
 mkdir -p ~/hadoop/hdfs/datanode
-***
+```
 
 ## 9. Atur environment di .bashrc (semua node)
----
+```bash
 nano ~/.bashrc
----
+```
 Tambahkan di bawah:
 ```bash
 export HADOOP_HOME=$HOME/hadoop
@@ -189,12 +189,12 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
 ```
 Aktifkan:
-```
+```bash
 source ~/.bashrc
 ```
 
 ## 10. Nonaktifkan Firewall
-```
+```bash
 sudo ufw disable
 ```
 
@@ -205,13 +205,13 @@ hdfs namenode -format
 ```
 
 ### Start Hadoop
-```
+```bash
 start-dfs.sh
 start-yarn.sh
 ```
 
 ### Cek JPS
-```
+```bash
 jps
 ```
 - Di Master: Harus muncul `NameNode`, `ResourceManager`
@@ -220,6 +220,9 @@ jps
 ## 12. Akses Web UI
 - NameNode: `http://master:9870`
 - ResourceManager: `http://master:8088`
+
+---
+Panduan ini sudah disesuaikan agar aman, stabil, dan cocok untuk implementasi di jaringan nyata. Jika ada kendala teknis atau ingin dijadikan skrip otomatis `.sh`, tinggal bilang saja!
 
 ---
 Panduan ini sudah disesuaikan agar aman, stabil, dan cocok untuk implementasi di jaringan nyata. Jika ada kendala teknis atau ingin dijadikan skrip otomatis `.sh`, tinggal bilang saja!
