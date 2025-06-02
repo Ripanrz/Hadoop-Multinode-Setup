@@ -36,7 +36,7 @@ sudo hostnamectl set-hostname slave2
 Restart semua komputer:
 ```bash
 sudo reboot
-
+```
 ### b. Tambahkan alamat IP dan hostname ke file /etc/hosts
 ```bash
 sudo nano /etc/hosts
